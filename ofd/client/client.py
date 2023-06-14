@@ -12,7 +12,7 @@ class Client:
         self.login = login
         self.password = password
         if auth_token:
-            self.auth_token = schemas.AuthToken(AuthToken=auth_token, ExpirationDateUtc=None)
+            self.auth_token = schemas.AuthToken(auth_token=auth_token, expiration_date_utc=None)
         else:
             self.auth_token = service.get_token(login, password)
 
