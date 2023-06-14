@@ -75,9 +75,6 @@ class Info(BaseModel):
     kkt_model: str = Field(alias='KktModel', description='Cash register model')
     fn_end_date: datetime = Field(alias='FnEndDate', description='Date and time when the fiscal drive expires')
 
-    class Config:
-        allow_population_by_field_name = True
-
 
 class KktList(BaseModel):
     id: str = Field(alias='Id')
@@ -99,6 +96,3 @@ class KktList(BaseModel):
     path: str = Field(alias='Path')
     kkt_model: str = Field(alias='KktModel')
     fn_end_date: datetime = Field(alias='FnEndDate')
-
-    class Config:
-        by_alias = True
