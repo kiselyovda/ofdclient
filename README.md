@@ -62,4 +62,14 @@ auth_token = os.environ.get('AUTH_TOKEN')
 
 client = client.Client(auth_token)
 ```
-After that you can do everything in [API interface](https://ofd.ru/razrabotchikam/cheki-i-kkt#авторизация_через_authtoken) using Python.
+After that you have access to the following points of [API interface](https://ofd.ru/razrabotchikam/cheki-i-kkt#авторизация_через_authtoken) using Python:
+
+
+You have access to the following points:
+
+### 2
+*future releases*
+
+### 3
+1. *future releases*
+2. **Request for a list of cash registers** ✅
