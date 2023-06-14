@@ -1,6 +1,6 @@
 # OFD.RU Client
 
-> This is unofficial client for [OFD.RU](https://ofd.ru/) API ["Receipts and cash registers"](https://ofd.ru/razrabotchikam/cheki-i-kkt#авторизация_через_authtoken).
+This is unofficial client for [OFD.RU](https://ofd.ru/) API ["Receipts and cash registers"](https://ofd.ru/razrabotchikam/cheki-i-kkt#авторизация_через_authtoken).
 
 ## Requirements
 
