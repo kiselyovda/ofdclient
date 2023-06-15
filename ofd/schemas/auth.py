@@ -1,16 +1,16 @@
 from datetime import datetime
 
-from pydantic import BaseModel, Field
+import pydantic as pd
 
 
-class Auth(BaseModel):
-    login: str = Field(alias='Login')
-    password: str = Field(alias='Password')
+class Auth(pd.BaseModel):
+    login: str = pd.Field(alias='Login')
+    password: str = pd.Field(alias='Password')
 
 
-class AuthToken(BaseModel):
-    auth_token: str = Field(alias='AuthToken', description='Authorization key')
-    expiration_date_utc: datetime | None = Field(
+class AuthToken(pd.BaseModel):
+    auth_token: str = pd.Field(alias='AuthToken', description='Authorization key')
+    expiration_date_utc: datetime | None = pd.Field(
         alias='ExpirationDateUtc',
         description='Date and time of validity of the authentication key'
     )

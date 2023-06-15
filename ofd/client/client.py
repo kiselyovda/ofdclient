@@ -1,7 +1,5 @@
 from .. import schemas, service
 
-__all__ = ['Client']
-
 
 class Client:
     def __init__(self, auth_token: str | None = None, *, login: str | None = None, password: str | None = None):
