@@ -97,7 +97,7 @@ class KktList(pd.BaseModel):
 
 
 class Group(pd.BaseModel):
-    id: str = pd.Field(alias='Id')
+    group_id: str = pd.Field(alias='Id')
     name: str = pd.Field(alias='Name')
     path: str = pd.Field(alias='Path')
     level: int = pd.Field(alias='Level')
