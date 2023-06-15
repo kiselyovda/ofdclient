@@ -2,8 +2,6 @@ from datetime import datetime
 
 from pydantic import BaseModel, Field
 
-__all__ = ['Auth', 'AuthToken']
-
 
 class Auth(BaseModel):
     login: str = Field(alias='Login')

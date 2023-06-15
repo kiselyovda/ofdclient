@@ -1,6 +1,6 @@
 import httpx
 
-from ofd import schemas
+from .. import schemas
 
 
 def get_token(login: str, password: str) -> schemas.AuthToken:
