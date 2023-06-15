@@ -1,10 +1,8 @@
-from ofd import schemas
-from .kkt import request_list_kkt
-
-__all__ = ['get_inn']
+from . import kkt
+from .. import schemas
 
 
 def get_inn(auth_token: schemas.AuthToken) -> str:
-    kkt_list = request_list_kkt(auth_token)
+    kkt_list = kkt.request_list_kkt(auth_token)
     inn = kkt_list[0].inn
     return inn

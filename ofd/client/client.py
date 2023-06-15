@@ -1,10 +1,6 @@
-from datetime import datetime, timedelta
+from .. import schemas, service
 
-from ofd import schemas, service
-
-__all__ = [
-    'Client'
-]
+__all__ = ['Client']
 
 
 class Client:
@@ -12,7 +8,7 @@ class Client:
         self.login = login
         self.password = password
         if auth_token:
-            self.auth_token = schemas.AuthToken(auth_token=auth_token, expiration_date_utc=None)
+            self.auth_token = schemas.AuthToken(AuthToken=auth_token, ExpirationDateUtc=None)
         else:
             self.auth_token = service.get_token(login, password)
 
@@ -23,3 +19,10 @@ class Client:
     @property
     def kkt_list(self) -> list[schemas.KktList]:
         return service.request_list_kkt(self.auth_token)
+
+    @property
+    def kkt_folders(self) -> list[schemas.Folder]:
+        return service.request_kkt_folders(self.auth_token)
+
+    def kkt_folder(self, group_id: str) -> list[schemas.Folder]:
+        return service.request_kkt_folders(self.auth_token, group_id=group_id)
