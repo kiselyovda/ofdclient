@@ -65,6 +65,10 @@ of [API interface](https://ofd.ru/razrabotchikam/cheki-i-kkt#авторизац�
 
 You have access to the following points:
 
+### 1
+
+1. Authorisation ✅
+
 ### 2
 
 *future releases*

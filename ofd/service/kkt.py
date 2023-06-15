@@ -1,4 +1,4 @@
-from typing import Type, Any
+import typing as tp
 
 import httpx
 import pydantic as pd
@@ -7,7 +7,7 @@ from .. import schemas
 
 
 def _get_data_from_request(url: str, params: dict,
-                           response_model: Type[pd.BaseModel]) -> list[Any]:
+                           response_model: tp.Type[pd.BaseModel]) -> list[tp.Any]:
     with httpx.Client() as client:
         response = client.get(url, params=params)
         match response.status_code:

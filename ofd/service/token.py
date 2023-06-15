@@ -11,7 +11,7 @@ def get_token(login: str, password: str) -> schemas.AuthToken:
         match response.status_code:
             case 200:
                 response_json = response.json()
-                return schemas.AuthToken(**response_json)
+                return schemas.AuthToken.parse_obj(response_json)
             case 403:
                 raise httpx.HTTPError('403 Forbidden. Incorrect login or password.')
             case 503:
